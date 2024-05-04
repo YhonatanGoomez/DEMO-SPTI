@@ -12,7 +12,7 @@ def xss_example(user_input):
 import requests
 
 def csrf_example(url, token, data):
-    # No se valida el token, lo que permite ataques CSRF
+    # No se valida el token, lo que permite ataques CSR
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.post(url, headers=headers, data=data)
     return response
